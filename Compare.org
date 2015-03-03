@@ -1,0 +1,155 @@
+* Introduction
+
+** Langages
+
+| Langage | type      | Paradigme   | objectif                                                                                                                          |
+|---------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------|
+| C       | Compilé   | Impératif   | est un langage commun très utilisé, notamment pour la programmation système.                                                      |
+| C++     | Compilé   | Impératif   | est un langage objet permettant de faire du bas niveau.                                                                           |
+| e-lisp  | Script    | ?           | le lisp d’emacs, ceci étant rédigé grace à emacs, il fallait l’intégrer dans le test.                                             |
+| Python  | Script    | Impératif   | python est un langage de script orienté objet, bien documenté et présent sur toute les plateformes.                               |
+| Bash    | Script    | Impératif   | est un langage de script en console. L’intéret de ce langage est de montrer qu’on peut faire de nombreuses chose avec ce dernier. |
+| Racket  | Compilé   | Fonctionnel | est un langage fonctionnel.                                                                                                       |
+| Haskell | Compilé   | Fonctionnel | est un langage fonctionnel *pur*.                                                                                                 |
+| Prolog  | Compilé   | Fonctionnel | est un langage fonctionnel ayant une mécanique particulière. On programme par /prédicat/.                                         |
+| Rust    | Compilé   | Impératif   | est un nouveau langage développé par /Mozilla/.                                                                                   |
+| Java    | /Compilé/ | Impératif   | est un langage impératif objet notament utilisé par Android.                                                                      |
+
+Nous aurions pu rajouter des tas d’autre langage : ocaml, go, julia, ada, pascal, ruby, obective-c…
+
+** Objectifs
+L’objectif est de montrer comment aborder un problème dans différents langages de programation. 
+Nous utiliserons pour ça des langages de scripts mais aussi des langages compilés.
+Nous utiliserons également des langages impératifs mais aussi des langages fonctionnels.
+L’objectif est de montrer comment on aborde un problème depuis sa définition jusqu’à sa résolution.
+
+J’ai choisi d’inclure le C et le C++ dans les choix car meme s’ils sont proches, il y a des différences notables
+qui peuvent etre importante au niveau de la syntaxe.
+
+Nous essayerons de toujours rester dans l’utilisation des bibliothèques fournies par le langage lui meme.
+
+Vous aurez besoin de savoir compiler ou exécuter vos programmes seul. 
+Ce n’est pas l’objectif de ce document, meme si pour le premier exemple je détaillerai un peu la procédure.
+
+
+* Les TPs
+
+** Simples
+
+*** Hello world
+
+**** Présentation.
+Ce programme est juste un affichage sur une ligne de votre console de « Hello world ».
+
+Il n’y a pas de données d’entrées.
+
+En sortie nous aurons simplement un affichage de « Hello world ».
+
+**** Étude de cas.
+Chacun des langages disposes de facilité pour afficher du texte. Chacun dispose également d’un point d’entré permettant de commencer l’exécution du programme.
+
+**** Implémentations
+
+
+***** En C
+
+Voici le code source.
+
+#+INCLUDE: Exemples/001-HelloWorld/C/main.c src C
+
+La première ligne contient la directive /include/ qui permet de spécifier qu’on veut utiliser les fonctionnalités d’entrée/sortie.
+
+Le point d’entré d’un programme en C est la fonction /main/.
+On appelle la fonction /printf/ qui permet de demander l’affichage d’une chaine de caractère. 
+Dans notre cas : « Hello World ».
+Le programme se termine par un /return/ pour sortir de la fonction /main/ et renvoyer un code de retour au programme appellant. 
+Ici on retourne : /0/ ce qui signifie « tout va bien ».
+
+***** En C++
+
+Voici le code source.
+
+#+INCLUDE: Exemples/001-HelloWorld/C++/main.cpp src C++
+
+Le programme ressemble étrangement au C.
+On inclue /iostream/ à la place de /stdio/, /iostream/ permet des facilités d’affichage et de gestion des flux plus avancé que le C.
+Pour afficher, on /pousse/ dans le flux /std::cout/, qui est le flux de sortie standard, la chaine qui nous intéresse.
+On termine en renvoyant /0/ à l’appelant.
+
+***** En e-lisp
+
+***** En python
+
+Voici le code source
+
+#+INCLUDE: Exemples/001-HelloWorld/python/hello_python src python
+
+La première ligne défine le chemin vers l’interpréteur.
+
+Ici, il n’y a pas de /point d’entré/, enfin si, c’est la deuxième ligne du fichier. Ensuite on apelle directement la fonction /print/ de python pour afficher sur la console.
+
+***** En bash
+
+Voici le code source.
+
+#+INCLUDE: Exemples/001-HelloWorld/bash/hello_bash src bash
+
+Comme pour le python, la première ligne défini le chemin de l’interpréteur.
+
+Le programme commence à la seconde ligne. 
+On apelle le programme ou fonction interne /echo/ permettant d’afficher ses paramètres dans la console.
+
+***** En Racket
+
+***** En Haskell
+
+Voici le code source.
+
+#+INCLUDE: Exemples/001-HelloWorld/Haskell/hello.hs src haskell
+
+/Haskell/ est un langage fonctionnel pur.
+C’est à dire que le résultat d’une fonction avec les memes paramètres ne peut pas changer.
+
+Ici nous utilisons la fonction /main/ qui est le point d’entré en spécifiant que /main/ est /putStrLn "Hello World"/.
+La fonction /putStrLn/ écrit sur la console la chaine reçue en paramètre.
+
+***** En Prolog
+
+***** En Rust
+
+***** En Java
+
+**** Comparaison
+
+*** Polynome du second degré
+
+*** fibonacci
+
+**** Approche fonctionnelle
+
+**** Approche itérative
+
+*** Nombres premiers
+
+*** PGCD
+
+*** PPCM
+
+** Moyens
+
+*** Tri de nombres
+
+*** Tri de mots
+
+*** Calculatrice
+
+
+** Complexes
+
+*** Résolution maison-chien…
+
+*** 8 Dames sur échiquier
+
+*** Passer par toutes les cases avec un cavalier
+
+*** 
