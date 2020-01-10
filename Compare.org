@@ -1,36 +1,98 @@
 * Introduction
 
-** Langages
-
-| Langage | type      | Paradigme   | objectif                                                                                                                          |
-|---------+-----------+-------------+-----------------------------------------------------------------------------------------------------------------------------------|
-| C       | Compilé   | Impératif   | est un langage commun très utilisé, notamment pour la programmation système.                                                      |
-| C++     | Compilé   | Impératif   | est un langage objet permettant de faire du bas niveau.                                                                           |
-| e-lisp  | Script    | ?           | le lisp d’emacs, ceci étant rédigé grace à emacs, il fallait l’intégrer dans le test.                                             |
-| Python  | Script    | Impératif   | python est un langage de script orienté objet, bien documenté et présent sur toute les plateformes.                               |
-| Bash    | Script    | Impératif   | est un langage de script en console. L’intéret de ce langage est de montrer qu’on peut faire de nombreuses chose avec ce dernier. |
-| Racket  | Compilé   | Fonctionnel | est un langage fonctionnel.                                                                                                       |
-| Haskell | Compilé   | Fonctionnel | est un langage fonctionnel *pur*.                                                                                                 |
-| Prolog  | Compilé   | Fonctionnel | est un langage fonctionnel ayant une mécanique particulière. On programme par /prédicat/.                                         |
-| Rust    | Compilé   | Impératif   | est un nouveau langage développé par /Mozilla/.                                                                                   |
-| Java    | /Compilé/ | Impératif   | est un langage impératif objet notament utilisé par Android.                                                                      |
-
-Nous aurions pu rajouter des tas d’autre langage : ocaml, go, julia, ada, pascal, ruby, obective-c…
-
 ** Objectifs
 L’objectif est de montrer comment aborder un problème dans différents langages de programation. 
+L’objectif n’est pas de vous fournir un tutoriel pour chacun des langages utilisés.
 Nous utiliserons pour ça des langages de scripts mais aussi des langages compilés.
 Nous utiliserons également des langages impératifs mais aussi des langages fonctionnels.
 L’objectif est de montrer comment on aborde un problème depuis sa définition jusqu’à sa résolution.
 
-J’ai choisi d’inclure le C et le C++ dans les choix car meme s’ils sont proches, il y a des différences notables
-qui peuvent etre importante au niveau de la syntaxe.
+J’ai choisi d’inclure le C et le C++ dans les choix car même si ils sont proches, il y a des différences notables
+qui peuvent être importante au niveau de la syntaxe.
 
-Nous essayerons de toujours rester dans l’utilisation des bibliothèques fournies par le langage lui meme.
+Nous essayerons de toujours rester dans l’utilisation des bibliothèques fournies par le langage lui même.
 
 Vous aurez besoin de savoir compiler ou exécuter vos programmes seul. 
 Ce n’est pas l’objectif de ce document, meme si pour le premier exemple je détaillerai un peu la procédure.
 
+
+** Détails
+Pour détailler un peu, nous allons voir les différents types de langages ainsi que différents paradigmes.
+
+*** Les types de langage
+Il y a deux types de langage :
+- Les langages compilés, c’est à dire qu’on transforme (compile) le code source qui est lisible par un humain en langage machine compréhensible uniquement par la machine.
+- Les langages interprété, c’est à dire qu’on fourni le code source à un programme écrit pour qu’il /interprête/ le source. On parle de l’interpréteur.
+
+Certains langages peuvent être un mix entre tous ces éléments. Par exemple, certains langages permettent de /compiler/ un programme. 
+En réalité, il s’agit d’une copie de l’interpréteur accolé au code source.
+
+D’autre utilise des représentations intermédiaire comme le java. 
+On peut /compiler/ le source qui devient un `.jar` en /bytecode/, mais c’est un code binaire spécifique qui nécessite une /machine virtuelle java/ pour être exécuté.
+
+
+*** Les paradigmes
+Là aussi, les langages se scindent en deux catégories principales. 
+Les langages /impératifs/ et les langages /fonctionnels/. 
+
+Un programme cherche à résoudre une problématique. 
+Dans un langage fonctionnel, on va le résoudre avec une approche plus mathématique.
+En réalisant des fonctions qui sont proches du sens mathématique.
+À l’inverse, dans un langage impératif, on va expliquer les étapes à réaliser pour résoudre le problème.
+
+Prenons l’exemple suivant : Pour allumer la lumière, il faut appuyer sur l’intérupteur.
+
+
+En fonctionnel on va lié l’état de l’intérupteur à l’état de la lumiére. lumière_est_allumée <=> intérupteur sur /on/
+En impératif, on écrire quelque chose comme : regarder_etat_interrupteur, si etat_interrupteur est sur on alors mettre état_lumière a allumée, sinon mettre état_lumière à etteinte.
+
+La plupart des langages fonctionnels possède également des aspects impératifs, ne serait-ce que pour afficher le résultat d’un calcul ou demander quelque chose à l’utilisateur.
+
+*** Le typage
+Le typage est une façon de représenter les données dont a besoin le programme. 
+On cherche à donner une signification aux données. Par exemple si 3 est un nombre. On peut l’utiliser comme un nombre général (type entier), mais aussi pourquoi pas de type altitude, vitesse, etc.
+Ensuite, lorsque l’on fait des calculs, on ajoute nos données ensemble. 
+Par erreur, on peut parfois ajouter des vitesses à des altitudes, ce qui n’a pas de sens.
+Les langages permettant cela sont qualifiés de langage au typage faible. 
+Ceux ne le permettant pas de typage fort.
+
+Les langages fortement typés sont moins permissif est refuse le programme pendant la phase que compilation, alors que d’autre s’apercevront de l’erreur à l’exécution et certain pas du tout.
+
+
+*** La programmation objet
+
+** Le choix des langages
+
+*** Les langages choisis
+
+ | Langage | type       | Paradigme   | objectif                                                                                                                          |
+ |---------+------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------|
+ | C       | Compilé    | Impératif   | est un langage commun très utilisé, notamment pour la programmation système.                                                      |
+ | C++     | Compilé    | Impératif   | est un langage objet permettant de faire du bas niveau.                                                                           |
+ | e-lisp  | Interprété | ?           | le lisp d’emacs, ceci étant rédigé grace à emacs, il fallait l’intégrer dans le test.                                             |
+ | Python  | Interprété | Impératif   | python est un langage de script orienté objet, bien documenté et présent sur toute les plateformes.                               |
+ | Bash    | Interprété | Impératif   | est un langage de script en console. L’intéret de ce langage est de montrer qu’on peut faire de nombreuses chose avec ce dernier. |
+ | Racket  | Compilé    | Fonctionnel | est un langage fonctionnel.                                                                                                       |
+ | Haskell | Compilé    | Fonctionnel | est un langage fonctionnel *pur*.                                                                                                 |
+ | Prolog  | Compilé    | Logique     | est un langage logique. On programme par /prédicat/.                                                                              |
+ | Rust    | Compilé    | Impératif   | est un nouveau langage développé par /Mozilla/.                                                                                   |
+ | Java    | /Compilé/  | Impératif   | est un langage impératif objet notament utilisé par Android.                                                                      |
+
+ Nous aurions pu rajouter des tas d’autre langage : ocaml, go, julia, ada, pascal, ruby, obective-c…
+
+
+
+*** Le C
+Le C est un langage ancien qui a été créé au début des années 1970 pour réécrire le systhème d’exploitation UNIX.
+C’est un langage impératif au typage faible.
+Le langage permet d’être proche de la machine.
+
+Aujourd’hui, on l’accuse d’être trop permissif et d’être le langage qui provoque le plus de faille de sécurité.
+De conception dépassé, etc.
+
+Pourquoi le choisir alors ? 
+Parce que c’est un classique, qu’il permet de comprendre plus facilement les aspects de complexité d’algorithme, de gestion mémoire, etc. qui sont caché dans des structures de données évoluées dans pas mal d’autre langages.
+Parce qu’il est toujours populaire malgré tout en 2020 alors qu’il approche de la quarentaine.
 
 * Les TPs
 
@@ -59,7 +121,7 @@ Voici le code source.
 
 La première ligne contient la directive /include/ qui permet de spécifier qu’on veut utiliser les fonctionnalités d’entrée/sortie.
 
-Le point d’entré d’un programme en C est la fonction /main/.
+  Le point d’entré d’un programme en C est la fonction /main/.
 On appelle la fonction /printf/ qui permet de demander l’affichage d’une chaine de caractère. 
 Dans notre cas : « Hello World ».
 Le programme se termine par un /return/ pour sortir de la fonction /main/ et renvoyer un code de retour au programme appellant. 
@@ -134,6 +196,8 @@ La fonction /putStrLn/ écrit sur la console la chaine reçue en paramètre.
 *** PGCD
 
 *** PPCM
+
+*** Triangle de pascal
 
 ** Moyens
 
