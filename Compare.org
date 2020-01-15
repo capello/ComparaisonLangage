@@ -217,3 +217,19 @@ La fonction /putStrLn/ écrit sur la console la chaine reçue en paramètre.
 *** Passer par toutes les cases avec un cavalier
 
 *** 
+
+** Optimisation
+
+*** Retour sur les nombres premiers
+
+*** Nombre premier Multithread
+
+*** Nombre premier FPGA
+
+*** Calcul à la compilation 
+
+**** Fibonacci
+
+**** Nb premier
+
+*** 
