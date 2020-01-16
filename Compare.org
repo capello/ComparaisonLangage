@@ -134,7 +134,7 @@ Voici le code source.
 #+INCLUDE: Exemples/001-HelloWorld/C++/main.cpp src C++
 
 Le programme ressemble étrangement au C.
-On inclue /iostream/ à la place de /stdio/, /iostream/ permet des facilités d’affichage et de gestion des flux plus avancé que le C.
+On inclue /iostream/ à la place de /stdio.h/, /iostream/ permet des facilités d’affichage et de gestion des flux plus avancé que le C.
 Pour afficher, on /pousse/ dans le flux /std::cout/, qui est le flux de sortie standard, la chaine qui nous intéresse.
 On termine en renvoyant /0/ à l’appelant.
 
@@ -159,7 +159,7 @@ Voici le code source.
 Comme pour le python, la première ligne défini le chemin de l’interpréteur.
 
 Le programme commence à la seconde ligne. 
-On apelle le programme ou fonction interne /echo/ permettant d’afficher ses paramètres dans la console.
+On appelle le programme ou fonction interne /echo/ permettant d’afficher ses paramètres dans la console.
 
 ***** En Racket
 
@@ -183,38 +183,160 @@ La fonction /putStrLn/ écrit sur la console la chaine reçue en paramètre.
 
 **** Comparaison
 
+*** Hello you
+
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 *** Polynome du second degré
 
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
+
+*** Factoriel
+
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 *** fibonacci
 
 **** Approche fonctionnelle
 
+***** Présentation
+
+***** Étude de cas
+
+***** Implémentations
+
+***** Comparaison
+
 **** Approche itérative
+
+***** Présentation
+
+***** Étude de cas
+
+***** Implémentations
+
+***** Comparaison
 
 *** Nombres premiers
 
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
+
 *** PGCD
+
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 
 *** PPCM
 
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
+
 *** Triangle de pascal
+
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 
 ** Moyens
 
 *** Tri de nombres
 
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
+
 *** Tri de mots
 
+
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 *** Calculatrice
+    
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 
 
 ** Complexes
 
 *** Résolution maison-chien…
 
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
+
 *** 8 Dames sur échiquier
+    
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 
 *** Passer par toutes les cases avec un cavalier
+
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 
 *** 
 
@@ -222,14 +344,64 @@ La fonction /putStrLn/ écrit sur la console la chaine reçue en paramètre.
 
 *** Retour sur les nombres premiers
 
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
+
 *** Nombre premier Multithread
+
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
 
 *** Nombre premier FPGA
 
+**** Présentation
+
+**** Étude de cas
+
+**** Implémentations
+
+**** Comparaison
+
 *** Calcul à la compilation 
+
+**** Factorielle
+
+
+***** Présentation
+
+***** Étude de cas
+
+***** Implémentations
+
+***** Comparaison
 
 **** Fibonacci
 
+***** Présentation
+
+***** Étude de cas
+
+***** Implémentations
+
+***** Comparaison
+
 **** Nb premier
 
+***** Présentation
+
+***** Étude de cas
+
+***** Implémentations
+
+***** Comparaison
 *** 

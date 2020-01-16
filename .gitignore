@@ -1,0 +1,9 @@
+*.pdf
+*.tex
+a.out
+*.o
+*.hi
+*.lock
+target/
+*~
+hello
