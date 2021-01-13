@@ -1,3 +1,45 @@
+#+OPTIONS: ^:nil
+#+LaTeX_CLASS: book
+
+Test intro
+
+
+#+BEGIN_SRC C :results output :export both
+#include <stdio.h>
+
+int main()
+{
+printf("Test from emacs\n");
+return 0;
+}
+#+END_SRC
+
+#+results:
+
+#+begin_src C :includes <stdio.h> :results output :exports both
+  int a=1;
+  int b=1;
+  printf("Test : %d\n", a+b);
+#+end_src
+
+#+RESULTS:
+
+#+BEGIN_SRC emacs-lisp :results output :exports both
+  (+ 1 2 3 4)
+#+END_SRC
+
+#+RESULTS:
+
+#+results: output
+: 
+
+#+begin_src python :results output
+print("Hello, world!")
+#+end_src
+
+#+RESULTS:
+
+
 * Introduction
 
 ** Objectifs
