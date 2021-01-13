@@ -16,6 +16,7 @@ Vous aurez besoin de savoir compiler ou exécuter vos programmes seul.
 Ce n’est pas l’objectif de ce document, meme si pour le premier exemple je détaillerai un peu la procédure.
 
 
+
 ** Détails
 Pour détailler un peu, nous allons voir les différents types de langages ainsi que différents paradigmes.
 
@@ -43,8 +44,8 @@ En réalisant des fonctions qui sont proches du sens mathématique.
 Prenons l’exemple suivant : Pour allumer la lumière, il faut appuyer sur l’intérupteur.
 
 
-En fonctionnel on va lié l’état de l’intérupteur à l’état de la lumiére. lumière_est_allumée <=> intérupteur sur /on/
-En impératif, on écrire quelque chose comme : regarder_etat_interrupteur, si etat_interrupteur est sur on alors mettre état_lumière a allumée, sinon mettre état_lumière à etteinte.
+En fonctionnel on va lié l’état de l’intérupteur à l’état de la lumiére. ~lumière_est_allumée~ <=> intérupteur sur /on/
+En impératif, on écrire quelque chose comme : ~regarder_etat_interrupteur~, si ~etat_interrupteur~ est sur /on/ alors mettre ~état_lumière~ a /allumée/, sinon mettre ~état_lumière~ à /etteinte/.
 
 La plupart des langages fonctionnels possède également des aspects impératifs, ne serait-ce que pour afficher le résultat d’un calcul ou demander quelque chose à l’utilisateur.
 
@@ -65,20 +66,21 @@ Les langages fortement typés sont moins permissif est refuse le programme penda
 
 *** Les langages choisis
 
- | Langage | type       | Paradigme   | objectif                                                                                                                          |
- |---------+------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------|
- | C       | Compilé    | Impératif   | est un langage commun très utilisé, notamment pour la programmation système.                                                      |
- | C++     | Compilé    | Impératif   | est un langage objet permettant de faire du bas niveau.                                                                           |
- | e-lisp  | Interprété | ?           | le lisp d’emacs, ceci étant rédigé grace à emacs, il fallait l’intégrer dans le test.                                             |
- | Python  | Interprété | Impératif   | python est un langage de script orienté objet, bien documenté et présent sur toute les plateformes.                               |
- | Bash    | Interprété | Impératif   | est un langage de script en console. L’intéret de ce langage est de montrer qu’on peut faire de nombreuses chose avec ce dernier. |
- | Racket  | Compilé    | Fonctionnel | est un langage fonctionnel.                                                                                                       |
- | Haskell | Compilé    | Fonctionnel | est un langage fonctionnel *pur*.                                                                                                 |
- | Prolog  | Compilé    | Logique     | est un langage logique. On programme par /prédicat/.                                                                              |
- | Rust    | Compilé    | Impératif   | est un nouveau langage développé par /Mozilla/.                                                                                   |
- | Java    | /Compilé/  | Impératif   | est un langage impératif objet notament utilisé par Android.                                                                      |
+ | Langage    | type       | Paradigme   | Typage | objectif                                                                                                                          |
+ |------------+------------+-------------+--------+-----------------------------------------------------------------------------------------------------------------------------------|
+ | C          | Compilé    | Impératif   | Moyen  | est un langage commun très utilisé, notamment pour la programmation système.                                                      |
+ | C++        | Compilé    | Impératif   | Moyen  | est un langage objet permettant de faire du bas niveau.                                                                           |
+ | e-lisp     | Interprété | ?           | Faible | le lisp d’emacs, ceci étant rédigé grace à emacs, il fallait l’intégrer dans le test.                                             |
+ | Python     | Interprété | Impératif   | Faible | python est un langage de script orienté objet, bien documenté et présent sur toute les plateformes.                               |
+ | Bash       | Interprété | Impératif   | Faible | est un langage de script en console. L’intéret de ce langage est de montrer qu’on peut faire de nombreuses chose avec ce dernier. |
+ | Racket     | Compilé    | Fonctionnel |        | est un langage fonctionnel.                                                                                                       |
+ | Haskell    | Compilé    | Fonctionnel | Fort   | est un langage fonctionnel *pur*.                                                                                                 |
+ | Prolog     | Compilé    | Logique     |        | est un langage logique. On programme par /prédicat/.                                                                              |
+ | Rust       | Compilé    | Impératif   | Fort   | est un nouveau langage développé par /Mozilla/.                                                                                   |
+ | Java       | /Compilé/  | Impératif   | Moyen  | est un langage impératif objet notament utilisé par Android.                                                                      |
+ | Javascript | Interprété | Impératif   | Faible | est un langage impératif utilisé notamment dans les navigateurs web.                                                              |
 
- Nous aurions pu rajouter des tas d’autre langage : ocaml, go, julia, ada, pascal, ruby, obective-c…
+ Nous aurions pu rajouter des tas d’autre langage : ocaml, go, julia, lua, ada, pascal, ruby, obective-c…
 
 
 
@@ -93,6 +95,31 @@ De conception dépassé, etc.
 Pourquoi le choisir alors ? 
 Parce que c’est un classique, qu’il permet de comprendre plus facilement les aspects de complexité d’algorithme, de gestion mémoire, etc. qui sont caché dans des structures de données évoluées dans pas mal d’autre langages.
 Parce qu’il est toujours populaire malgré tout en 2020 alors qu’il approche de la quarentaine.
+
+*** Le C++
+Le C++ est un langage apparue dans les années 1980, d’abord comme extension au C (C with Class) puis en tant que langage indépendant.
+
+On considère encore souvant le C++ comme une extension du C, ce qui est faux aujourd’hui, même si le C++ est casi rétro compatible avec le C. 
+C’est à dire qu’il peut compiler un programme C sans modification.
+
+Le C++ est bien plus que ça, depuis la norme C++ de 2011, de nombreux ajouts ont été effectués dans le C++. 
+Le C++ c’est un langage proche du C, mais la bibliothèque standard embarque aujourd’hui de nombreuses améliorations :
+- Les lambdas,
+- Les conteneurs, (c’est pas nouveau, mais certains le sont)
+- La programmation générique,
+- etc.
+
+*** Le e-lisp
+Lisp est la plus ancienne famille de langages de programmation à la fois impératifs et fonctionnels.
+Le e-Lisp est un langage de la famille du lisp utilisé par l’éditeur de texte ~emacs~.
+Le logiciel emacs est lui même écrit en parti en ~e-lisp~. 
+Le langage permet de programmer n’importe quel fonctionnalité, et il s’intègre parfaitement dans l’éditeur, ce qui permet très facilement de traiter des fichiers textes de manière intelligente.
+
+C’est un langage de script.
+
+*** Le python
+Le python est un langage qui a plus de vingt ans, mais il a sû évoluer.
+C’est un langage objet, 
 
 * Les TPs
 
@@ -404,4 +431,4 @@ La fonction /putStrLn/ écrit sur la console la chaine reçue en paramètre.
 ***** Implémentations
 
 ***** Comparaison
-*** 
+*** Tri multithread
