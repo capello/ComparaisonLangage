@@ -1,6 +1,7 @@
+
 class Hello {
-	static int main() {
-		system.out("Hello World!\n");
+	public static void main(String[] args) {
+		System.out.print("Hello World!\n");
 	}
 }
 
